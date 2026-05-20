@@ -1,5 +1,5 @@
 ﻿using System;
-
+ 
 class Connect4
 {
     static char[,] board = new char[6, 7];
