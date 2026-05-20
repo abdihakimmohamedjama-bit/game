@@ -1,7 +1,7 @@
-﻿using System;
- 
+using System;
+
 class Connect4
-{
+{ // Code to create the board and start the game loop
     static char[,] board = new char[6, 7];
 
     static void Main()
@@ -12,7 +12,7 @@ class Connect4
         bool gameWon = false;
 
         while (!gameWon)
-        { 
+        {  // Code to clear the console and make the board, then ask the player to choose a where to drop their piece
             Console.Clear();
             PrintBoard();
 
