@@ -106,7 +106,7 @@ class Connect4
         int c = col + colDir;
 
         while (r >= 0 && r < 6 && c >= 0 && c < 7 && board[r, c] == player)
-        {
+        { // Code to check if the pieces are in the board and if they are the same as the player
             count++;
             r += rowDir;
             c += colDir;
