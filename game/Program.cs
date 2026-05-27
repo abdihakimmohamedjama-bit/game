@@ -20,7 +20,7 @@ class Connect4
 
             int col;
             if (!int.TryParse(Console.ReadLine(), out col) || col < 0 || col > 6)
-            {
+            { // Code to check if the player choose number between 0 and 6, if not it will ask the player to choose again
                 Console.WriteLine("Invalid column!");
                 Console.ReadKey();
                 continue;
@@ -29,21 +29,21 @@ class Connect4
             int row = DropPiece(col, currentPlayer);
 
             if (row == -1)
-            {
+            { // Code to check if the column is full, if it is it will ask the player to choose again
                 Console.WriteLine("Column is full!");
                 Console.ReadKey();
                 continue;
             }
 
             if (CheckWin(row, col, currentPlayer))
-            {
+            {  // Code to check if the player has won, if they have it will clear the console
                 Console.Clear();
                 PrintBoard();
                 Console.WriteLine($"Player {currentPlayer} wins!");
                 gameWon = true;
             }
             else
-            {
+            { // Code to switch the player
                 currentPlayer = (currentPlayer == 'X') ? 'O' : 'X';
             }
         }
